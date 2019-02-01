@@ -1,0 +1,71 @@
+def num_points_scored(players_name)
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, attribute_data|
+      if attribute == :players
+          attribute_data.each do |name, info|
+            if name == players_name
+              return game_hash[location][:players][players_name][:points] 
+            end 
+          end 
+      end 
+    end
+  end
+end
+
+def num_points_scored (name)
+  player = 
+end
+
+def shoe_size(players_name)
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, attribute_data|
+      if attribute == :players
+          attribute_data.each do |name, info|
+            if name == players_name
+              return game_hash[location][:players][players_name][:shoe] 
+            end 
+          end 
+      end 
+    end
+  end
+end
+
+
+def team_colors (team_name)
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, attribute_data|
+      if attribute_data == team_name
+        return game_hash[location][:colors]
+      end
+    end 
+  end
+end
+
+def team_names
+  array = []
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, attribute_data|
+      if attribute == :team_name
+        array << attribute_data
+      end
+    
+    end
+  array
+  end
+end 
+
+def player_numbers (team_name)
+  array = []
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, attribute_data|
+      if attribute == :players
+        attribute.each do |name, info|
+          info.each do |category, int|
+            if game_hash[location][]
+          end
+        end
+      end
+    end
+  end
+  array
+end
