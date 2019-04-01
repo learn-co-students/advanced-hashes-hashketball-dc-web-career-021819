@@ -145,6 +145,7 @@ def shoe_size(player_name)
   game_hash.each do |location, team_hash|
     team_hash.each do |team_keys, team_values|
       if team_keys == :players
+      # team_keys[:players].each do
         team_values.each do |players, stats|
           if players == player_name
             stats.each do |stat_key, stat_value|
@@ -158,6 +159,10 @@ def shoe_size(player_name)
     end
   end
 end
+#
+# def shoe_size(player_name)
+#   game_hash.each do |team, team_info|
+#     team_info[:players]
 
 
 def team_colors(team_name)
@@ -233,4 +238,4 @@ def big_shoe_rebounds
     end
   end
   highest_rebounds
-end 
+end
